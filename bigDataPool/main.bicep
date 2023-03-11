@@ -2,7 +2,7 @@
 
 @description('Required. Spark Pool Purpose. The lenght must not exceed 10 characters')
 @maxLength(10)
-param sparkPoolPurpose string
+param sparkPoolPurpose string = 'train'
 
 @description('Required. Name of the Synapse Workspace.')
 @minLength(5)
