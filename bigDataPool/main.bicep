@@ -13,7 +13,10 @@ param synapseWorkspaceName string
 param location string = resourceGroup().location
 
 @description('Required. Resource tags.')
-param sparkPoolTags object = {}
+param sparkPoolTags object = {
+  department : 'dataAndAI'
+  resourceOwner: 'Aliens'
+}
 
 @description('Optional. Enable Autoscale feature.')
 param sparkAutoScaleEnabled bool = true
