@@ -143,6 +143,6 @@ resource sparkPool 'Microsoft.Synapse/workspaces/bigDataPools@2021-06-01' = {
 
 output sparkPoolName string = sparkPool.name
 output sparkPoolResourceId string = sparkPool.id
-output poolURL string = 'https://${synapseWorkspaceName}.dev.azuresynapse.net'
 output synapseWorkspaceName string = synapseWorkspace.name
 output SynapseWorkSpaceResourceId string = synapseWorkspace.id
+output developmentEndpoint string = synapseWorkspace.properties.connectivityEndpoints.dev
