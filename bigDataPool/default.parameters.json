@@ -1,0 +1,54 @@
+{
+    "$schema": https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#,
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "synapseWorkspaceName": {
+            "value": "synw-demo-validation-dte"
+        },
+        "location": {
+            "value": "West Europe"
+        },
+        "sparkPoolPurpose": {
+            "value": "train"
+        },
+        "sparkNodeSizeFamily": {
+            "value": "MemoryOptimized"
+        },
+        "sparkNodeSize": {
+            "value": "Medium"
+        },
+        "sparkVersion": {
+            "value": "3.3"
+        },
+        "sparkAutoScaleEnabled": {
+            "value": true
+        },
+        "sparkAutoScaleMaxNodeCount": {
+            "value": 6
+        },
+        "sparkAutoScaleMinNodeCount": {
+            "value": 3
+        },
+        "sparkNodeCount": {
+            "value": 0
+        },
+        "sparkAutoPauseEnabled": {
+            "value": true
+        },
+        "sparkAutoPauseDelayInMinutes": {
+            "value": 5
+        },
+        "sparkDynamicExecutorEnabled": {
+            "value": true
+        },
+        "sparkMaxExecutorCount": {
+            "value": 3
+        },
+        "sparkMinExecutorCount": {
+            "value": 1
+        },
+        "sparkCacheSize": {
+            "value": 20
+        }
+    }
+}
