@@ -51,9 +51,9 @@ param sparkNodeSizeFamily string = 'MemoryOptimized'
 @allowed([
   'Small'
   'Medium'
-//  'Large'
-//  'XLarge'
-//  'XXLarge'
+  'Large'
+  'XLarge'
+  'XXLarge'
 ])
 param sparkNodeSize string = 'Medium'
 
@@ -137,6 +137,8 @@ resource sparkPool 'Microsoft.Synapse/workspaces/bigDataPools@2021-06-01' = {
       minExecutors: sparkMinExecutorCount
       maxExecutors: sparkMaxExecutorCount
     }
+
+    // To investigate the cacheSize related warning - 'Warning: BCP073 The Property CacheSize is ReadOnly'
     cacheSize: sparkCacheSize
   }
 }
